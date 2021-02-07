@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Пользователи</h1>
+    <a class="btn btn-primary" href="/create_user">Добавить пользователя</a>
+
+     {% if user|length > 0 %}
+        {% for elements in user %}
+            <div class="alert alert-info">
+                <h3>{{ elements.officer_firstname }}</h3>
+                <h3>{{ elements.officer_lastname }}</h3>
+                <a href="/user/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одного пользователя</p>
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Населенные пункты
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Список Населенных пунктов на сайте:</h1>
+    <a class="btn btn-primary" href="/создание_населенный пункта">Создать населенный пункт</a>
+
+    {% if township|length > 0 %}
+        {% for el in township %}
+            <div class="alert alert-info">
+                <h3>{{ el.title_settlement }}</h3>
+                <a href="/settlement/{{ el.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлен ни один населенный пункт</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания пользователя
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление пользователя</h1>
+    <form method="post">
+		 <input type="text" name="login" id="login" class="form-control" value="{{ user.login }}" placeholder="Введите логин пользователя"><br>
+        <input type="text" name="password" id="password" class="form-control" value="{{ user.password }}" placeholder="Введите пароль пользователя"><br>
+		<input type="text" name="officer_firstname" id="officer_firstname" class="form-control" value="{{ user.officer_firstname }}" placeholder="Введите имя сотрудника"><br>
+        <input type="text" name="officer_lastname" id="officer_lastname" class="form-control" value="{{ user.officer_lastname }}" placeholder="Введите фамилию сотрудника"><br>
+        <input type="text" name="officer_rank" id="officer_rank" class="form-control" value="{{ user.officer_rank }}" placeholder="Введите звание сотрудника"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"></p>
+
+    </form>
+</div>
+
+{% endblock %}

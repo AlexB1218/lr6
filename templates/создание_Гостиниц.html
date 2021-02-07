@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Создание гостиниц
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавить гостиницу</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Введите название"/><br>
+        <select name="Star" id="Star">
+            <option>1 звезда</option>
+            <option>2 звезда</option>
+            <option>3 звезда</option>
+            <option>4 звезда</option>
+            <option>5 звезда</option>
+        </select>
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+    </form>
+</div>
+{% endblock %}

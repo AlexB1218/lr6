@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container mt-5">
+<h1>Владельцы авто</h1>
+    <a class="btn btn-primary" href="/create_owner">Добавить владельца авто</a>
+
+     {% if owner|length > 0 %}
+        {% for elements in owner %}
+            <div class="alert alert-info">
+                <h3>{{ elements.firstname }}</h3>
+                <h3>{{ elements.lastname  }}</h3>
+                <a href="/owner/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлен ни один владелец</p>
+    {% endif %}
+
+</div>
+{% endblock %}

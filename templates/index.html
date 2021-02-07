@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 style="color:white">Все разделы:</h1>
+    <h3>Информация о пользователе - <a class="btn btn-warning" href="/user">Посмотреть</a></h3>
+    <h3>Информация о владельце авто - <a class="btn btn-warning" href="/owner">Посмотреть</a></h3>
+    <h3>Информация об автомобиле - <a class="btn btn-warning" href="/auto">Посмотреть</a></h3>
+    <h3>Информация об инспекции - <a class="btn btn-warning" href="/inspection">Посмотреть</a></h3>
+    <h3>Информация о резервировании данных - <a class="btn btn-warning" href="/backup">Посмотреть</a></h3>
+</div>
+{% endblock %}

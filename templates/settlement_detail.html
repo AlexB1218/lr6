@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ township.title_settlement }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ township.title_settlement }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID населенного пункта: {{ township.id }}</b> </p>
+        <p><b>Название населенного пункта: {{ township.title_settlement }}</b> </p>
+        <p><b>Код населенного пункта: {{ township.settlement_code }}</b> </p>
+        <a href="/settlement/{{ township.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/settlement/{{ township.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

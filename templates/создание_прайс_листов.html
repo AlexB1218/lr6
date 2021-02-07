@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Создание прайс-лист
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавить прайс-лист</h1>
+    <form method="post">
+        <input type="text" name="id_tour" id="id_tour" class="form-control" placeholder="Введите id тура"/><br>
+        <input type="text" name="title_hostel" id="title_hostel" class="form-control" placeholder="Введите название гостиницы"/><br>
+        <input type="text" name="price_tour" id="price_tour" class="form-control" placeholder="Введите цену тура"/><br>
+        <input type="date" name="date_tour" id="date_tour" class="form-control" placeholder="Введите дату тура"/><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+    </form>
+</div>
+{% endblock %}

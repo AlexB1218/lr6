@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Обновление инфрмации о Гостинице
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Обновление инфрмации о Гостинице</h1>
+    <form method="post">
+        <input type="text" name="Star" id="Star" value="{{ article.Star }}" class="form-control" placeholder="Введите количество звезд"/><br>
+        <input type="text" name="title" id="title" value="{{ article.title }}" class="form-control" placeholder="Введите название"/><br>
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+    </form>
+</div>
+{% endblock %}

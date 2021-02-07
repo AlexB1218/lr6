@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ owner.firstname }}
+{{ owner.lastname }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ owner.firstname }}</h1>
+    <h1>{{ owner.lastname }}</h1>
+    <div class="alert alert-info">
+        <p><b>ID владельца: {{ owner.id }}</b> </p>
+        <p><b>Имя владельца: {{ owner.firstname }}</b> </p>
+        <p><b>Фамилия владельца: {{ owner.lastname }}</b> </p>
+        <p><b>Пол владельца: {{ owner.gender }}</b> </p>
+        <p><b>Адресс владельца: {{ owner.adress }}</b> </p>
+        <p><b>Дата рождения: {{ owner.birthday }}</b> </p>
+        <p><b>Номер лицензии: {{ owner.license }}</b> </p>
+        <a href="/owner/{{ owner.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/owner/{{ owner.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ price.title }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ price.title }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID прайс-листа: {{ price.id }}</b> </p>
+        <p><b>ID тура: {{ price.id_tour }}</b> </p>
+        <p><b>Название гостиницы: {{ price.title_hostel }}</b> </p>
+        <p><b>Стоймость тура: {{ price.price_tour }}</b> </p>
+        <p><b>Дата тура: {{ price.date_tour }}</b> </p>
+        <a href="/price_list/{{ price.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/price_list/{{ price.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

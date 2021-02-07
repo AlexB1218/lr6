@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Прайс-листы
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Список Прайс-листы на сайте:</h1>
+    <a class="btn btn-primary" href="/создание_прайс_листов">Создать прайс-лист</a>
+
+    {% if price|length > 0 %}
+        {% for el in price %}
+            <div class="alert alert-info">
+                <h3>{{ el.title_hostel }}</h3>
+                <p><b>Дата: {{ el.date_tour }}</b></p>
+                <a href="/price_list/{{ el.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлен ни один прайс-лист</p>
+    {% endif %}
+</div>
+{% endblock %}

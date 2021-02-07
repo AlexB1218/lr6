@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ user.officer_firstname }}
+{{ user.officer_lastname }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ relocation.officer_firstname }}</h1>
+    <h1>{{ relocation.officer_lastname }}</h1>
+    <div class="alert alert-info">
+		<p><b>Логин пользователя: {{ user.login }}</b> </p>
+        <p><b>Пароль пользователя: {{ user.password }}</b> </p>
+		<p><b>Имя сотрудника: {{ user.officer_firstname }}</b> </p>
+        <p><b>Фамилия сотрудника: {{ user.officer_lastname }}</b> </p>
+        <p><b>Звание сотрудника: {{ user.officer_rank }}</b> </p>
+        <a href="/user/{{ user.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/user/{{ user.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания инспекции
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление инспекции</h1>
+    <form method="post">
+        <input type="text" name="date" id="date" class="form-control" value="{{ inspection.date }}" placeholder="Введите дату инспекции"><br>
+        <input type="text" name="result" id="result" class="form-control" value="{{ inspection.result }}" placeholder="Введите результат"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

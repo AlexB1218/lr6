@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ tour.type_tour }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ tour.type_tour }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID тура: {{ tour.id }}</b> </p>
+        <p><b>Тип тура: {{ tour.type_tour }}</b> </p>
+        <p><b>Продолжительность тура (дней): {{ tour.duration }}</b> </p>
+        <p><b>Название населенного пункта: {{ tour.title_settlement }}</b> </p>
+        <p><b>Наличие гостиницы: {{ tour.hotel_availability }}</b> </p>
+        {% if tour.hotel_availability == "Гостиница есть" %}
+            <p><b>Название гостиницы: {{ tour.title_hostel }}</b> </p>
+        {% endif %}
+        <p><b>Вид транспорта: {{ tour.mode_vehicle }}</b> </p>
+        <p><b>Пункт отправления: {{ tour.point_shipping }}</b> </p>
+        <a href="/the_tour/{{ tour.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/the_tour/{{ tour.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

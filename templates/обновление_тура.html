@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Обновление инфрмации о туре
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Обновление инфрмации о туре</h1>
+    <form method="post">
+        <input type="text" name="type_tour" id="type_tour" value="{{ tour.type_tour }}" class="form-control" placeholder="Введите тип тура"/><br>
+        <input type="text" name="duration" id="duration" value="{{ tour.duration }}" class="form-control" placeholder="Введите продолжительность тура (дней)"/><br>
+        <input type="text" name="title_settlement" id="title_settlement" value="{{ tour.title_settlement }}" class="form-control" placeholder="Введите название населенного пункта"/><br>
+        <input type="text" name="hotel_availability" id="hotel_availability" value="{{ tour.hotel_availability }}" class="form-control" placeholder="Наличие гостиницы"/><br>
+        <input type="text" name="title_hostel" id="title_hostel" value="{{ tour.title_hostel }}" class="form-control" placeholder="Введите название гостиницы"/><br>
+        <input type="text" name="mode_vehicle" id="mode_vehicle" value="{{ tour.mode_vehicle }}" class="form-control" placeholder="Введите вид транспорта"/><br>
+        <input type="text" name="point_shipping" id="point_shipping" value="{{ tour.point_shipping }}" class="form-control" placeholder="Введите пункт отправления"/><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+    </form>
+</div>
+{% endblock %}

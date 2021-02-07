@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ auto.technical_passport }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ auto.technical_passport }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID автомобиля: {{ auto.id }}</b> </p>
+        <p><b>Цвет автомобиля: {{ auto.colour }}</b> </p>
+        <p><b>Марка автомобиля: {{ auto.brand }}</b> </p>
+        <p><b>Технический паспорт: {{ auto.technical_passport }}</b> </p>
+        <p><b>Номер двигателя: {{ auto.engine }}</b> </p>
+        <a href="/auto/{{ auto.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/auto/{{ auto.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

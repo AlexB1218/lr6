@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ land.title_country }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ land.title_country }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID страны: {{ land.id }}</b> </p>
+        <p><b>Название страны: {{ land.title_country }}</b> </p>
+        <p><b>Язык страны: {{ land.country_language }}</b> </p>
+        <a href="/country/{{ land.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/country/{{ land.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

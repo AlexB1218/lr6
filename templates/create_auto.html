@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для добавления автомобилей
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление автомобилей</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" placeholder="Введите id автомобиля"><br>
+        <input type="text" name="colour" id="colour" class="form-control" placeholder="Введите цвет авто"><br>
+        <input type="text" name="brand" id="brand" class="form-control" placeholder="Марка авто"><br>
+        <input type="text" name="technical_passport" id="technical_passport" class="form-control" placeholder="Технический паспорт"><br>
+        <input type="number" name="engine" id="engine" class="form-control" placeholder="Номер двигателя"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"></p>
+
+    </form>
+</div>
+
+{% endblock %}
